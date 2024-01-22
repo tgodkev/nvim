@@ -8,10 +8,38 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
+	  'nvim-telescope/telescope.nvim', tag = '0.1.4',
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+
+  use {
+  "nobbmaestro/nvim-andromeda",
+  requires = { "tjdevries/colorbuddy.nvim", branch = "dev" }
+}
+
+use "rebelot/kanagawa.nvim"
+
+
+
+use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+}
+
+
+use {
+    'olimorris/onedarkpro.nvim',
+    config = function()
+        require('onedarkpro').setup({
+            options = {
+                transparency = true, -- This makes the background transparent
+            }
+        })
+        vim.cmd("colorscheme onedark")-- Correctly apply the colorscheme
+    end
+}
 
   use({
 	  'rose-pine/neovim',

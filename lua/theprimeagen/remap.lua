@@ -49,3 +49,12 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
+
+
+-- move to start/end of line
+vim.keymap.set("n", "<leader>l", "$")
+vim.keymap.set("n", "<leader>h", "^")
+
+vim.keymap.set("n", "<leader>b", "G")
+vim.keymap.set("n", "<leader>t", "gg")
+
