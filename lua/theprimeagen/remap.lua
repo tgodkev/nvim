@@ -58,3 +58,8 @@ vim.keymap.set("n", "<leader>h", "^")
 vim.keymap.set("n", "<leader>b", "G")
 vim.keymap.set("n", "<leader>t", "gg")
 
+
+-- toggle term keybinds
+
+vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<CR>")
+

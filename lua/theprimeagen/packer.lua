@@ -37,7 +37,7 @@ use {
                 transparency = true, -- This makes the background transparent
             }
         })
-        vim.cmd("colorscheme onedark")-- Correctly apply the colorscheme
+        vim.cmd("colorscheme onedark_dark")-- Correctly apply the colorscheme
     end
 }
 
@@ -48,6 +48,12 @@ use {
 		  vim.cmd('colorscheme rose-pine')
 	  end
   })
+
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+  require("toggleterm").setup()
+end}
+
+
 
   use({
       "folke/trouble.nvim",
